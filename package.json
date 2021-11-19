@@ -1,0 +1,16 @@
+{
+  "name": "target-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "promise.any": "^2.0.2",
+    "robotjs": "^0.6.0"
+  }
+}
