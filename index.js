@@ -4,7 +4,7 @@ checkAvailability();
 
 setInterval(() => {
   checkAvailability();
-}, 10000);
+}, 3000);
 
 function checkAvailability() {
   axios
