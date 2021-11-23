@@ -31,12 +31,12 @@ function checkAvailability() {
       }
 
       const isOutOfStock =
-        res.data.data.product.fulfillment
-          .is_out_of_stock_in_all_store_locations;
+        res.data.data?.product?.fulfillment
+          ?.is_out_of_stock_in_all_store_locations;
 
       const isOutOfStockShipping =
-        res.data.data.product.fulfillment.shipping_options
-          .availability_status === "OUT_OF_STOCK";
+        res.data.data?.product?.fulfillment?.shipping_options
+          .?availability_status === "OUT_OF_STOCK";
 
       if (isOutOfStock && isOutOfStockShipping) {
         console.log(
