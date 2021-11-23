@@ -4,7 +4,7 @@ let addedToCart = false;
 
 checkAvailability(true);
 
-setInterval(() => {
+const loop = setInterval(() => {
   checkAvailability();
 }, 1000);
 
@@ -90,6 +90,10 @@ function checkAvailability(tryBuy = false) {
           }
         );
         console.log(`[${new Date().toLocaleTimeString()}] WE'VE GOT A HIT`);
+
+        if (!tryBuy) {
+          clearInterval(loop);
+        }
       }
     });
 }
